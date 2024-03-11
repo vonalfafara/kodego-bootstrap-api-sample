@@ -25,13 +25,15 @@ const Navigation = () => {
             onClick={() => setShow(true)}
           />
           <Nav className="d-none d-md-flex gap-2 flex-row">
-            {routes.map((route, index) => {
-              return (
-                <Nav.Link key={index} as={Link} to={route.path}>
-                  {route.name}
-                </Nav.Link>
-              );
-            })}
+            {routes
+              .filter((route) => route.forNavbar)
+              .map((route, index) => {
+                return (
+                  <Nav.Link key={index} as={Link} to={route.path}>
+                    {route.name}
+                  </Nav.Link>
+                );
+              })}
           </Nav>
         </Container>
       </Navbar>
@@ -46,13 +48,15 @@ const Navigation = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            {routes.map((route, index) => {
-              return (
-                <Nav.Link key={index} onClick={() => changePage(route.path)}>
-                  {route.name}
-                </Nav.Link>
-              );
-            })}
+            {routes
+              .filter((route) => route.forNavbar)
+              .map((route, index) => {
+                return (
+                  <Nav.Link key={index} onClick={() => changePage(route.path)}>
+                    {route.name}
+                  </Nav.Link>
+                );
+              })}
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
