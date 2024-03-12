@@ -19,7 +19,7 @@ const Navigation = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Games Catalog</Navbar.Brand>
           <Navbar.Toggle
             className="d-block d-md-none"
             onClick={() => setShow(true)}

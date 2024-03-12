@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import routes from "./routes";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <>
       <Navigation />
-
       <Routes>
         {routes.map((route, index) => {
           return (
@@ -19,6 +19,7 @@ const App = () => {
           );
         })}
       </Routes>
+      <Footer />
     </>
   );
 };

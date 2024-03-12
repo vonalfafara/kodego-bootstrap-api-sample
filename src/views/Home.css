@@ -22,7 +22,7 @@
   flex-direction: column;
 }
 
-.card-body button {
+.card-body a {
   margin-top: auto;
 }
 
